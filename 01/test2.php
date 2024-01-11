@@ -1,3 +1,6 @@
 <?php
 
-something new();
+function somethingNew(): string
+{
+    return "blabla";
+}

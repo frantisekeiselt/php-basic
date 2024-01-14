@@ -50,7 +50,7 @@
 */
 function router(string $uri): array
 
-// Zde už je kód co zůstane jak je:
+// Zde už jje kód co zůstane jak je:
 $uris = [
     "/logout",
     "/list/users",

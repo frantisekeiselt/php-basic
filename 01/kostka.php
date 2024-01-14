@@ -1,3 +1,8 @@
+
+<h1>Ahoj!</h1>
+
+echo($promenna);
+
 <?php
 
 function kostka()

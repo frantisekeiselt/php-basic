@@ -49,30 +49,6 @@
 
 */
 function router(string $uri): array
-{
-    $router = new Router();
-    $router =>addRoute("/logout", function () {
-    return ["status" => "200 OK", "data" => "Logging out..."];
-});
-    $router =>addRoute("list/users", function () {
-    return ["status" => "200 OK", "data" => "Listing all users..."];
-});
-    $router =>addRoute("/list/users/active", function () {
-    return ["status" => "200 OK", "data" => "Listing all active users..."];
-});
-    $router =>addRoute("/list", function () {
-    return ["status" => "200 OK", "data" => "Listing..."];
-});
-    $router =>addRoute("/view/product/15001", function ($ProductID) {
-    return ["status" => "200 OK", "data" => "Viewing product ID $ProductID"];
-});
-    $router =>addRoute("/view/user/55", function ($UserID) {
-    return ["status" => "200 OK", "data" => "Viewing user $UserID"];
-});
-
-
-	return []; 
-}
 
 // Zde už je kód co zůstane jak je:
 $uris = [

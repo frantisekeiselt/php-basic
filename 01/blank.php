@@ -49,8 +49,36 @@
 
 */
 function router(string $uri): array
+{
 
-// Zde už jje kód co zůstane jak je:
+    $router = router($uri);
+    $router["path"] = ltrim($router["path"], "/");
+    $router["path"] = trim($router["path"]);
+
+    $trace = explode("/", $router["path"]);
+
+    return $trace;
+
+    if ($uri === "logout") {
+
+        return [
+            "action" => "logout",
+            "resource" => null,
+           "parameters" => null,
+            ];
+
+        }
+
+
+    if $uri !== $uris "action", "resource", "parameters" => null;
+
+
+$router->addroute("GET", "/", $uri("/logout"));
+
+
+
+
+// Zde už je kód co zůstane jak je:
 $uris = [
     "/logout",
     "/list/users",
@@ -65,7 +93,10 @@ $uris = [
     "//users",
     "/product/505"
 ];
+}
 
 foreach ($uris as $uri) {
     var_dump("URI " . $uri . ":");
     var_dump(router($uri));
+
+

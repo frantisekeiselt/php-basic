@@ -72,11 +72,11 @@ function router(string $uri): array
 
         return
 
-        ["action" => "list"];
-    ["resource" => "zdroj"];
-    ["parameters" => null];
+            ["action" => "list"];
+        ["resource" => "zdroj"];
+        ["parameters" => null];
 
-}
+    }
 
 
     if ($uri === "/view/product/{id}") {
@@ -86,12 +86,10 @@ function router(string $uri): array
 
             ["action" => "view"];
         ["resource" => "product"];
-        ["parameters" => "id" => null];
+        ["parameters" => null];
 
 
-
-
-        }
+    }
 
 
     if ($uri !== $uris) {
@@ -129,4 +127,4 @@ function router(string $uri): array
         var_dump("URI " . $uri . ":");
         var_dump(router($uri));
 
-    };
+        }

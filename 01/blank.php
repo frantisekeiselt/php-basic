@@ -59,13 +59,37 @@ function router(string $uri): array
 
     return $trace;
 
-    if ($uri === "logout") {
+    if ($uri === "/logout") {
 
-        return [
-            "action" => "logout",
-            "resource" => null,
-           "parameters" => null,
-            ];
+        return
+            ["action" => "logout"];
+        ["resource" => null];
+        ["parameters" => null];
+
+    }
+
+    if ($uri === "/list/{zdroj}") {
+
+        return
+
+        ["action" => "list"];
+    ["resource" => "zdroj"];
+    ["parameters" => null];
+
+}
+
+
+    if ($uri === "/view/product/{id}") {
+
+
+        return
+
+            ["action" => "view"];
+        ["resource" => "product"];
+        ["parameters" => "id" => null];
+
+
+
 
         }
 
@@ -78,35 +102,31 @@ function router(string $uri): array
         ["parameters" => null];
 
 
-
     }
 
 
-
-$router->addroute("GET", "/", $uri("/logout"));
-
-
+    $router->addroute("GET", "/", $uri("/logout"));
 
 
 // Zde už je kód co zůstane jak je:
-$uris = [
-    "/logout",
-    "/list/users",
-    "/list/users/active",
-    "/list",
-    "/view/product/15001",
-    "/view/user/55",
-    "/view/product",
-    "/send/email",
-    "/",
-    "///",
-    "//users",
-    "/product/505"
-];
-}
-
-foreach ($uris as $uri) {
-    var_dump("URI " . $uri . ":");
-    var_dump(router($uri));
+    $uris = [
+        "/logout",
+        "/list/users",
+        "/list/users/active",
+        "/list",
+        "/view/product/15001",
+        "/view/user/55",
+        "/view/product",
+        "/send/email",
+        "/",
+        "///",
+        "//users",
+        "/product/505"
+    ];
 
 
+    foreach ($uris as $uri) {
+        var_dump("URI " . $uri . ":");
+        var_dump(router($uri));
+
+    };

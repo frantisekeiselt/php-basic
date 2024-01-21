@@ -70,7 +70,17 @@ function router(string $uri): array
         }
 
 
-    if $uri !== $uris "action", "resource", "parameters" => null;
+    if ($uri !== $uris) {
+
+        return
+            ["action" => null];
+        ["resource" => null];
+        ["parameters" => null];
+
+
+
+    }
+
 
 
 $router->addroute("GET", "/", $uri("/logout"));
